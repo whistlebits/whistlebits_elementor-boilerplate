@@ -23,9 +23,9 @@ add_action( 'elementor/widgets/register', 'register_wb_elementor_widgets' );
 function add_elementor_widget_categories( $elements_manager ) {
 
 	$elements_manager->add_category(
-		'whistlebits',
+		'new-category',   // update
 		[
-			'title' => esc_html__( 'Whistlebits', 'textdomain' ),
+			'title' => esc_html__( 'NEW CATEGORY', 'textdomain' ), //update
 			'icon' => 'fa fa-plug',
 		]
 	);

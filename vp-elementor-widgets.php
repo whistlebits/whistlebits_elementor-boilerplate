@@ -16,3 +16,19 @@ function register_wb_elementor_widgets( $widgets_manager ) {
 
 }
 add_action( 'elementor/widgets/register', 'register_wb_elementor_widgets' );
+
+// register category
+// be sure to update category in widget file
+
+function add_elementor_widget_categories( $elements_manager ) {
+
+	$elements_manager->add_category(
+		'whistlebits',
+		[
+			'title' => esc_html__( 'Whistlebits', 'textdomain' ),
+			'icon' => 'fa fa-plug',
+		]
+	);
+
+}
+add_action( 'elementor/elements/categories_registered', 'add_elementor_widget_categories' );
